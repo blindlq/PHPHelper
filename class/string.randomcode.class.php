@@ -44,9 +44,46 @@
             }
         }
         
-        //生成指定长度的英文string
+        //生成指定长度的英文string，小写
         static function en($length){
-            
+            if(is_integer($length)&&$length!=0){
+                $res="";
+                for($i=0;$i<$length;$i++){
+                    $res .= chr(mt_rand(97, 122));
+                }
+                return $res;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        //生成指定长度的英文string，大写
+        static function encaps($length){
+            if(is_integer($length)&&$length!=0){
+                $res="";
+                for($i=0;$i<$length;$i++){
+                    $res .= chr(mt_rand(65, 90));
+                }
+                return $res;
+            }
+            else{
+                return 0;
+            }
+        }
+
+        //生成指定长度的string，大小写符号混合
+        static function mix($length){
+            if(is_integer($length)&&$length!=0){
+                $res="";
+                for($i=0;$i<$length;$i++){
+                    $res .= chr(mt_rand(33, 126));
+                }
+                return $res;
+            }
+            else{
+                return 0;
+            }
         }
     }
     
