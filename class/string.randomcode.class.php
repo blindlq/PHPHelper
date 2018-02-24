@@ -85,6 +85,21 @@
                 return 0;
             }
         }
+
+        //生成指定长度的string,简体汉字
+        static function zh($length){
+            if(is_integer($length)&&$length!=0){
+                $res="";
+                for($i=0;$i<$length;$i++){
+                    $zh = chr(mt_rand(0xB0,0xD0)).chr(mt_rand(0xA1, 0xF0));
+                    $res .= iconv('GB2312', 'UTF-8', $zh);
+                }
+                return $res;
+            }
+            else{
+                return 0;
+            } 
+        }
     }
     
 

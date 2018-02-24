@@ -14,4 +14,5 @@ for ($i = 0; $i < count($files); $i++) {
 // 以下为测试区域
 
 //echo $res = Randomcode::int(0);
-echo $res = Randomcode::mix(5);
+// echo $res = Randomcode::mix(5);
+echo $res = Randomcode::zh(3);
